@@ -1,0 +1,21 @@
+{
+  "name": "My test extension",
+  "version": "1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["libs/jquery.min.js", "libs/vkopenapi.js", "content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "libs/vkopenapi.js",
+    "libs/jquery.min.js"
+  ],
+  "permissions": ["contextMenus" , "downloads", "background" ,"tabs", "storage" , "http://*/*", "https://*/*"]
+}

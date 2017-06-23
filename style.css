@@ -1,0 +1,57 @@
+.select {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    height: 30px;
+    transition-property: background, color;
+    transition-duration: 0.2s;
+    color: transparent;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.selected-photo:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(33, 150, 243, 0.4);
+    pointer-events: none;
+}
+.selected-photo .select {
+    background: rgba(33, 150, 243, 0.8);
+    color: white;
+}
+.select:hover {
+    background: rgba(33, 150, 243, 0.8);
+    color: white;
+}
+
+
+.download-btn {
+    position: fixed;
+    bottom: 0;
+    width: 755px;
+    height: 40px;
+    z-index: 100;
+    transition-property: background, color;
+    transition-duration: 0.2s;
+    background: #9E9E9E;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #616161;
+}
+
+.download-btn.active {
+    background: #4caf50;
+    color: #DCEDC8;
+    cursor: pointer;
+}
